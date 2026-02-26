@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EECU Budget Calculator</title>
+</head>
+<body>
+    <nav class="navBar">
+        <ul class="navItems">
+            <li class="navLogo">logo</li>
+            <li class="addBudgetBtn">Add Budget</li>
+            <li class="collapseMenu">
+                <select name="" id="collapseMenu">
+                    <img src="#" alt="#">
+                </select>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <section class="information">
+            <div class="pieChart"></div>
+            <section class="pieChartLegend"></section>
+        </section>
+        <section class="inputs">
+            <div class="progressBar">
+                <button id="stepOne">1</button>
+                <button id="stepTwo">2</button>
+                <button id="stepThree">3</button>
+                <button id="stepFour">4</button>
+                <button id="stepFive">5</button>
+            </div>
+            <h2 id="inputsTitle"></h2>
+            <form action="">
+                <label for="">Whe do you receieve your income?</label>
+                <label for="" id="housingLabel">Housing</label>
+                <input type="text" id="housingInput">
+                <label for="" id="groceriesLabel">Groceries</label>
+                <input type="text" id="groceriesLabel">
+                <label for="" id="utilLabel">Utilities</label>
+                <input type="text" id="utilInput">
+                <label for="" id="healthLabel">Healthcare(optional)</label>
+                <input type="text" id="healthInput">
+                <label for="" id="transportLabel">Tansportation</label>
+                <input type="text" id="transportInput">
+                <label for="" id="childLabel">Childcare(optional)</label>
+                <input type="text" id="childInput">
+                <!-- btn image in css -->
+                <button id="addInputBtn">add</button>
+                <button id="nextBtn">
+                    <a href="index.html">Back</a>
+                </button>
+                <button id="nextBtn">
+                    <a href="">Next</a>
+                </button>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
