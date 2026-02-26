@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EECU Budget Calculator</title>
+</head>
+<body>
+    <nav class="navBar">
+        <ul class="navItems">
+            <li class="navLogo"></li>
+            <li class="addBudgetBtn"></li>
+            <li class="collapseMenu"></li>
+        </ul>
+    </nav>
+    <main>
+        <section class="information">
+            <div class="pieChart"></div>
+            <section class="pieChartLegend"></section>
+        </section>
+        <section class="inputs">
+            <div class="progressBar">
+                <button id="stepOne">1</button>
+                <button id="stepTwo">2</button>
+                <button id="stepThree">3</button>
+                <button id="stepFour">4</button>
+                <button id="stepFive">5</button>
+            </div>
+            <h2 class="inputsTitle"></h2>
+            <form action="">
+                <label for="">Whe do you receieve your income?</label>
+                <select name="" id="" class="incomePeriod">
+                    <option value="none">Select an Option</option>
+                    <option value="annualy" class="annualy">Annualy</option>
+                    <option value="monthly" class="monthly">Monthly</option>
+                    <option value="biWeekly" class="biWeekly">Bi-Weekly</option>
+                    <option value="weekly" class="weekly">Weekly</option>
+                </select>
+                <label for="" class="incomeLabel">Your Amount of income</label>
+                <input type="text" class="incomeInput">
+                <!-- btn image in css -->
+                <button class="addInputBtn">add</button>
+                <button class="nextBtn">
+                    <a href="essentials.html">Next</a>
+                </button>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
