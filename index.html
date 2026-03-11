@@ -35,11 +35,15 @@
         <section id="mainSection">
             <div class="boxes">
                 <div class="topBar"></div>
+                <!--this is where the pie chart is displayed-->
                 <section class="information">
                     <canvas class="pieChart" id="chartCanvas"></canvas>
                     <section class="pieChartLegend" id="informationLegend"></section>
                 </section>
+
             </div>
+
+            <!--these are where the inputs are-->
             <section class="inputs">
                 <div class="progressBar">
                     <button id="stepOne">1</button>
@@ -60,9 +64,14 @@
                             <option value="weekly" class="weekly">Weekly</option>
                         </select>
                         <label for="" class="incomeLabel">Your Amount of income</label>
-                        <input type="text" class="incomeInput">
+                        <div id="incomeSection">
+                            <span id="dollar">$</span>
+                            <input type="text" class="incomeInput">
+                            <button class="addInputBtn">add</button>
+                        </div>
+
                         <!-- btn image in css -->
-                        <button class="addInputBtn">add</button>
+
                         <button class="nextBtn">
                             <a href="essentials.html">Next</a>
                         </button>
