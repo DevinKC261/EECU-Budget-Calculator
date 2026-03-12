@@ -1,3 +1,31 @@
+// --- Occupation Select ---
+async function OccupationSelector() {
+  const selectOccupation = document.getElementById('occupationSelect');
+  const OccupationSalaryMap = new Map();
+  try {
+      const response = await fetch('https://eecu-data-server.vercel.app/data');
+      if (!response.ok) {
+          throw new Error('Network response was not ok');
+      }
+
+      const users = await response.json();
+
+      users.forEach(user => {
+        OccupationSalaryMap.set(user["Occupation"], user["Salary"]);
+          const option = new Option(user["Occupation"], user["Occupation"]);
+          selectOccupation.add(option);
+      });
+
+      selectOccupation.addEventListener('change', () => {
+          salary.textContent = OccupationSalaryMap.get(selectOccupation.value) || '';
+      })
+  } catch (error) {
+      console.error('There was a problem with the fetch operation:', error);
+  }
+}
+
+OccupationSelector();
+
 // --- Step Pages ---
 const stepPages = document.querySelectorAll(".progressBar button");
 stepPages.forEach(btn => {
