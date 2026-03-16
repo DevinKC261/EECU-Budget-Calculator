@@ -1,4 +1,6 @@
 // --- Occupation Select ---
+const salary = document.getElementById('salary');
+
 async function OccupationSelector() {
   const selectOccupation = document.getElementById('occupationSelect');
   const OccupationSalaryMap = new Map();

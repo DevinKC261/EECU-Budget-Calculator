@@ -4,10 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="style.css">
     <title>EECU Budget Calculator</title>
     <script defer src="index.js" type="module"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script type="module" src="navigation.js"></script>
 </head>
 
 <body>
@@ -33,7 +34,7 @@
     <main>
         <h1>Budget Calculator</h1>
         <section id="mainSection">
-            <div class="boxes">
+            <div class="boxes" style="display: block;">
                 <div class="topBar"></div>
                 <!--this is where the pie chart is displayed-->
                 <section class="information">
@@ -46,28 +47,92 @@
             <!--these are where the inputs are-->
             <section class="inputs">
                 <div class="progressBar">
-                    <button id="stepOne">1</button>
-                    <button id="stepTwo">2</button>
-                    <button id="stepThree">3</button>
-                    <button id="stepFour">4</button>
-                    <button id="stepFive">5</button>
+                    <button id="stepOne"><a href="#incomeContainer">1</a></button>
+                    <button id="stepTwo"><a href="#essentials-page">2</a></button>
+                    <button id="stepThree"><a href="#wants-page">3</a></button>
+                    <button id="stepFour"><a href="#saves-page">4</a></button>
+                    <button id="stepFive"><a href="#taxes-page">5</a></button>
                 </div>
-                <div class="boxes">
-                    <h2 class="inputsTitle"></h2>
-                    <form action="">
-                        <h3>Income</h3>
+
+                <div class="boxes" style="display: block;">
+                    <h3>Income</h3>
+                    <form>
                         <section id="incomeContainer">
                             <label class="label">Occupation</label>
                             <select id="occupationSelect"></select>
-                        </select>
-                    </section>
+                            <label class="label">Salary $</label>
+                            <p id="salary" class="salary"></p>
+                        </section>
 
                         <!-- btn image in css -->
-
-                        <button class="nextBtn">
-                            <a href="essentials.html">Next</a>
-                        </button>
                     </form>
+                    <a href="#essentials-page" class="nextBtn">Next</a>
+                </div>
+
+                <div class="boxes">
+                    <section class="" id="essentials-page">
+                        <h3>Needs</h3>
+                        <form>
+                            <label class="label">Needs</label>
+                            <input type="number" id="payment">
+                            <label class="label">Needs</label>
+                            <input type="number" id="payment">
+                            <label class="label">Needs</label>
+                            <input type="number" id="payment">
+                            <label class="label">Needs</label>
+                            <input type="number" id="payment">
+                            <label class="label">Needs</label>
+                            <input type="number" id="payment">
+                            <label class="label">Needs</label>
+                            <input type="number" id="payment">
+                            <button></button>
+                        </form>
+                    </section>
+                    <a href="#" class="backBtn" id="back">Back</a>
+                    <a href="#wants-page" class="nextBtn" id="next">Next</a>
+
+                    <section id="wants-page">
+                        <h3>Wants</h3>
+                        <form>
+                            <label class="label">Needs</label>
+                            <input type="number" id="payment">
+                            <label class="label">Needs</label>
+                            <input type="number" id="payment">
+                            <label class="label">Needs</label>
+                            <input type="number" id="payment">
+                            <label class="label">Needs</label>
+                            <input type="number" id="payment">
+                            <button></button>
+                        </form>
+                    </section>
+                    <a href="#" class="backBtn" id="back">Back</a>
+                    <a href="#saves-page" class="nextBtn">Next</a>
+
+                    <section id="saves-page">
+                        <h3>Savings</h3>
+                        <form>
+                            <label class="label">Needs</label>
+                            <input type="number" id="payment">
+                            <label class="label">Needs</label>
+                            <input type="number" id="payment">
+                            <label class="label">Needs</label>
+                            <input type="number" id="payment">
+                            <button id="add"></button>
+                        </form>
+                    </section>
+                    <a href="#" class="backBtn" id="back">Back</a>
+                    <a href="#taxes-page" class="nextBtn">Next</a>
+
+                    <section id="taxes-page">
+                        <h3>Taxes</h3>
+                        <form>
+                            <label class="label">Needs</label>
+                            <input type="number" id="payment">
+                            <button></button>
+                        </form>
+                    </section>
+                    <a href="#" class="backBtn" id="back">Back</a>
+                    <a href="results.html" class="nextBtn">Results</a>
                 </div>
             </section>
         </section>
